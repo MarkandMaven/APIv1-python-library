@@ -1,4 +1,4 @@
-Mark and Maven's API v1 Python Library
+# Mark and Maven's API v1 Python Library
 
 The Mark and Maven API exposes features via a standardized programmatic interface. Please refer to the full documentation to learn more. This is the wrapper for the API. 
 
