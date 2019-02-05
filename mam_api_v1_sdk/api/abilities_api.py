@@ -8,7 +8,8 @@ import six
 from mam_api_v1_sdk.api_client import ApiClient
 
 class AbilitiesApi(object):
-	def __init(self, api_client=None):
+
+	def __init__(self, api_client=None):
 		if api_client is None:
 			api_client = ApiClient()
 		self.api_client = api_client

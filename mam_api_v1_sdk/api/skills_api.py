@@ -8,7 +8,7 @@ import six
 from mam_api_v1_sdk.api_client import ApiClient
 
 class SkillsApi(object):
-	def __init(self, api_client=None):
+	def __init__(self, api_client=None):
 		if api_client is None:
 			api_client = ApiClient()
 		self.api_client = api_client
@@ -18,9 +18,9 @@ class SkillsApi(object):
 		# asynchronous HTTP request, please pass async=True
 		kwargs['_return_http_data_only'] = True
 		if kwargs.get('async'):
-			return self.get_skills_with_http_info(**kwargs)
+			return self.get_skills(**kwargs)
 		else:
-			(data) = self.get_skills_with_http_info(**kwargs)
+			(data) = self.get_skills(**kwargs)
 			return data
 
 	def get_skills_with_http_info(self, **kwargs):
@@ -72,4 +72,5 @@ class SkillsApi(object):
 			_return_http_data_only=params.get('_return_http_data_only'),
 			_preload_content=params.get('_preload_content', True),
 			_request_timeout=params.get('_request_timeout'),
-			collection_formats=collection_formats)
+			collection_formats=collection_formats
+		)
