@@ -13,17 +13,17 @@ class AccountApi(object):
 			api_client = ApiClient()
 		self.api_client = api_client
 
-	def get_abilities(self, **kwargs):
+	def get_account(self, **kwargs):
 		# This method makes a synchronous HTTP request by default. To make an
 		# asynchronous HTTP request, please pass async=True
 		kwargs['_return_http_data_only'] = True
 		if kwargs.get('async'):
-			return self.get_abilities_with_http_info(**kwargs)
+			return self.get_account(**kwargs)
 		else:
-			(data) = self.get_abilities_with_http_info(**kwargs)
+			(data) = self.get_account(**kwargs)
 			return data
 
-	def get_abilities_with_http_info(self, **kwargs):
+	def get_account_with_http_info(self, **kwargs):
 		all_params = []
 		all_params.append('async')
 		all_params.append('_return_http_data_only')
@@ -34,7 +34,7 @@ class AccountApi(object):
 			if key not in all_params:
 				raise TypeError(
 					"Got an unexpected keyword argument '%s'"
-					" to method get_abilities" % key
+					" to method get_account" % key
 				)
 			params[key] = val
 		del params['kwargs']

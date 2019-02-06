@@ -19,9 +19,9 @@ class AbilitiesApi(object):
 		# asynchronous HTTP request, please pass async=True
 		kwargs['_return_http_data_only'] = True
 		if kwargs.get('async'):
-			return self.get_abilities_with_http_info(**kwargs)
+			return self.get_abilities(**kwargs)
 		else:
-			(data) = self.get_abilities_with_http_info(**kwargs)
+			(data) = self.get_abilities(**kwargs)
 			return data
 
 	def get_abilities_with_http_info(self, **kwargs):
